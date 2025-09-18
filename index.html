@@ -1,36 +1,12 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Webnet Security Solutions</title>
-    <meta name="description" content="Webnet Security Solutions — CCTV cameras, DVR/NVR, installation, AMC, live monitoring & support. Call 84449-80008." />
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="styles.css" />
-
-    <!-- ✅ Netlify Identity widget -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  </head>
-  <body>
-    <div id="root">
-      <!-- यहाँ आपकी existing site content होगा -->
-      <h1>Welcome to Webnet Security Solutions</h1>
-      <p>24×7 CCTV & Security for Home & Business</p>
-    </div>
-
-    <script src="site.js"></script>
-
-    <!-- ✅ Auto-init script -->
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    </script>
-  </body>
-</html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Webnet Security Solutions</title><link rel="icon" href="favicon.png"><link rel="stylesheet" href="styles.css"></head><body>
+<nav class="container"><div class="left"><div class="logo"><img src="logo-white.png" alt="logo"></div><div style="margin-left:6px"><strong>Webnet Security Solutions</strong><div style="font-size:12px;color:#9fb0c7">CCTV • Installation • AMC</div></div></div><div class="navlinks"><a href="index.html">Home</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div class="header-cta"><a class="btn" href="tel:+918444980008">84449-80008</a><a class="btn primary" href="https://wa.me/918444980008" target="_blank">WhatsApp</a></div></nav>
+<main class="container">
+  <section class="hero">
+    <div class="text"><h1>24×7 CCTV & Security for Home & Business</h1><p>Design • Supply • Installation • AMC. Live monitoring on your phone.</p><p><a class="btn primary" href="contact.html">Get Free Site Visit</a></p></div>
+    <img src="hero.jpg" alt="hero">
+  </section>
+  <section class="section"><h2>Services</h2><div class="grid-3"><div class="card"><h3>CCTV Cameras</h3><p>Indoor & outdoor dome/bullet cameras</p></div><div class="card"><h3>DVR / NVR Setup</h3><p>Recording solutions with HDD</p></div><div class="card"><h3>Mobile Monitoring</h3><p>Live access on your phone</p></div></div></section>
+  <section class="section"><h2>Packages</h2><div class="grid-3"><div class="card"><h3>Starter</h3><p>2 Dome Cameras, 4ch DVR, 500GB HDD</p></div><div class="card"><h3>Standard</h3><p>4 Cameras, 4ch DVR, 1TB HDD</p></div><div class="card"><h3>Business</h3><p>8 Cameras, 8ch DVR, 2TB HDD</p></div></div></section>
+</main>
+<footer><div class="container"><div>© <span id="year"></span> Webnet Security Solutions</div></div></footer><script src="site.js"></script></body></html>

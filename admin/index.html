@@ -9,8 +9,8 @@
   <!-- 1) Netlify Identity widget (must load BEFORE CMS) -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-  <!-- 2) Netlify CMS (Decap) app -->
-  <script src="https://unpkg.com/netlify-cms-app@^2.0.0/dist/netlify-cms.js"></script>
+  <!-- 2) Netlify CMS (Decap) app — stable specific version -->
+  <script src="https://unpkg.com/netlify-cms-app@2.15.72/dist/netlify-cms.js"></script>
 
   <style>
     body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; padding:24px; color:#0f172a; background:#f8fafc; }
@@ -22,17 +22,16 @@
   <p>If you see a login or signup widget, try signing in with the email you used for Identity.</p>
 
   <script>
-    // Debug output to help us confirm scripts loaded
+    // debug
     console.log('admin: typeof netlifyIdentity =', typeof window.netlifyIdentity);
     console.log('admin: typeof CMS =', typeof window.CMS);
 
-    // If identity object exists, initialize debug handlers
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on('init', user => {
         console.log('netlifyIdentity init, user present:', !!user);
       });
       window.netlifyIdentity.on('login', () => {
-        console.log('netlifyIdentity login event — redirecting to /admin/');
+        console.log('netlifyIdentity login — redirecting to /admin/');
         window.location.href = '/admin/';
       });
     }

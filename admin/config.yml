@@ -2,23 +2,29 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "static/uploads"
+media_folder: "public/uploads"
 public_folder: "/uploads"
-
-site_url: "https://webnetsecurity.in"
 
 collections:
   - name: "projects"
     label: "Projects"
-    label_singular: "Project"
     folder: "content/projects"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Summary", name: "summary", widget: "text"}
-      - {label: "Category", name: "category", widget: "string"}
-      - {label: "Price", name: "price", widget: "string"}
-      - {label: "Featured", name: "featured", widget: "boolean", default: false}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Images", name: "images", widget: "list", field: {label: "Image", name: "image", widget: "image"}}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Images", name: "images", widget: "list", field: { label: "Image", name: "image", widget: "image" } }
+
+  - name: "products"
+    label: "Products"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
